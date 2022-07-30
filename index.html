@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Última modificsción de esta página usando Bootstrap -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 
 <body>
     <!-- ============= Cabecera de la página  ============== -->
@@ -104,286 +107,266 @@
         </nav>
     </header>
     <!-- ============= fin de cabecera de la página  ============== -->
+
     <!-- ============= Contenido principal de la página  ============== -->
     <main>
         <!--Sección 1 :  contiene las imágenes principales -->
         <section>
+            <div class="contenedor_principal">
 
-            <div class="container mt-5">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div id="carouselIndex" class="carousel slide mt-5" data-bs-ride="carousel" style="background-color: blue;">
-
-                            <div class="carousel-indicators">
-                              <button type="button" data-bs-target="#carouselIndex" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                              <button type="button" data-bs-target="#carouselIndex" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                              <button type="button" data-bs-target="#carouselIndex" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner" style="background-color: blue;">
-                                <div class="carousel-item active index_primer_contenedor-imagen">
-                                    <img src="imagenes/principal.png" alt="Malandro_principal" class="d-block">
-                                </div>
-                            
-                                <div class="carousel-item index_primer_contenedor-imagen">
-                                    <img src="imagenes/blusa.png" alt="Malandro_principal" class="d-block">
-                                </div>
-                            
-                                <div class="carousel-item index_primer_contenedor-imagen">
-                                    <img src="imagenes/catrin.webp" alt="Malandro_principal" class="d-block">
-                                </div>
-                            </div>
-                            <!-- iconops de izquierda y derecha -->
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndex" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Atras</span>
-                            </button>
-
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndex" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Siguiente</span>
-                            </button>
+                <!-- Contenedor de la imagen principal de la sección 1 -->
+                <div class="contenedor_principal-imagen carousel slide" data-bs-ride="carousel" id="carouselIndex">
+                
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselIndex" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselIndex" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselIndex" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
-                    </div>
+
+                        <div class="carousel-inner" style="background-color: blue;">
+                            <div class="carousel-item active">    
+                                    <img src="imagenes/principal.png" alt="Malandro_principal">
+                            </div>
+                
+                            <div class="carousel-item">
+                                    <img src="imagenes/blusa.png" alt="Malandro_principal">             
+                            </div>
+                
+                            <!-- <div class="carousel-item">
+                                <div class="contenedor_hijo_imagen">
+                                    <img src="imagenes/catrin.webp" alt="Malandro_principal">
+                                </div>
+                            </div> -->
+        
+                        </div>
                         
-                        <!-- Contenedor de la imagen principal de la sección 1 -->
-                        <!-- <div class="index_primer_contenedor-imagen">
-                            <img src="imagenes/principal.png" alt="Malandro_principal">
-                        </div> -->
-                        <!-- Fin del contenedor de la imagen principal  -->
-                    
-
-                    <div class="col-md-7 col-lg-7">
-                        <!-- contenedor de texto de la sección 1 -->
-                        <div class="index_primer_contenedor-titulo mt-5">
-                            <h1><b>MALANDRO HA LLEGADO</b></h1>
-                        </div>
-
-
-
-                        <div class="index_primer_contenedor-texto">
-                            <p>
-                                MALANDRO es una marca indumentaria nacida en la ciudad de México en 2016, fundada
-                                por un proyecto donde convergen diversos sectores creativos (fotógrafos, publicistas
-                                diseñadores textiles y gráficos), inspirada por el Streetwear Culture.
-
-                                <br>
-                                MALANDRO se ha extendido para convertirse en un líder de creación de prendas y diseños
-                                únicos que se enorgullece por crear piezas de la mejor calidad que la gente quiere, pero
-                                también de darles un poco de lo que necesitan.
-                            </p>
-                        </div>
-
-                        <div class="contenedor_boton_checar">
-                            <a href="./pages/seccionProductos/hombre-chamarras.html" class="btn_checar">Checar</a>
-                        </div>
-
-                        <!-- Fin del contenedor de texto de la sección 1 -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndex" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Atras</span>
+                        </button>
+                
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselIndex" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
                     </div>
+                <!-- Fin del contenedor de la imagen principal  -->
 
+                <!-- contenedor de texto de la sección 1 -->
+                <div class="contenedor_principal-texto">
+                    <h1><b>MALANDRO HA LLEGADO</b></h1>
+                    <div class="contenido_principal-texto">
+                        <p>
+                            MALANDRO es una marca indumentaria nacida en la ciudad de México en 2016, fundada
+                            por un proyecto donde convergen diversos sectores creativos (fotógrafos, publicistas
+                            diseñadores textiles y gráficos), inspirada por el Streetwear Culture.
+
+                            <br>
+                            MALANDRO se ha extendido para convertirse en un líder de creación de prendas y diseños
+                            únicos que se enorgullece por crear piezas de la mejor calidad que la gente quiere, pero
+                            también de darles un poco de lo que necesitan.
+                        </p>
+                    </div>
+                    <div class="contenedor_boton_checar">
+                        <a href="./pages/seccionProductos/hombre-chamarras.html" class="btn_checar">Checar</a>
+                    </div>
                 </div>
+                <!-- Fin del contenedor de texto de la sección 1 -->
 
-                <div class="row">
-                    <div class="col-sm-12 col-lg-12 mt-3">
-                        <div class="titulo_novedades">
-                            <h2 data-text="Novedades">Novedades</h2>
-                        </div>
-                    </div>
 
+                <!-- Contenedor de la sección 1: titulo novedades -->
+                <div class="titulo_novedades">
+                    <h2 data-text="Novedades">Novedades</h2>
                 </div>
-            </div>
+                <!-- Fin del contenedor titulo novedades -->
 
-            <div class="contenedor_novedades mb-5">
+                <!-- Contenddor card novedades -->
+                <div class="contenedor_novedades">
 
-                <!-- card 1 -->
-                <div class="card_novedades">
-                    <div class="card_novedades_imagen">
-                        <img src="imagenes/catrin.webp" alt="">
-                    </div>
-                    <div class="card-texto_boton">
-                        <div class="card_texto">
-                            <h2>El catrin <br> $700 MX</h2>
+                    <!-- card 1 -->
+
+                    <div class="card_novedades">
+                        <div class="card_novedades_imagen">
+                            <img src="imagenes/catrin.webp" alt="">
                         </div>
-                        <div class="card_boton">
-                            <a href="./pages/carrito.html">
-                                <button>
-                                    <img src="./imagenes/cart.png" alt="        
+                        <div class="card-texto_boton">
+                            <div class="card_texto">
+                                <h2>El catrin <br> $700 MX</h2>
+                            </div>
+                            <div class="card_boton">
+                                <a href="./pages/carrito.html">
+                                    <button>
+                                        <img src="./imagenes/cart.png" alt="        
                                         " width="35" height="35">
-                                </button>
-                                <!-- Realizacion de alerta -->
-                                <!-- <div class="alert hide">
-                                        <span class="fas fa-cart-plus"></span>
-                                        <span class="msg">Producto añadido con exito</span>
-                                        <span class="close-btn">
-                                            <span class="fas fa-times"></span>
-                                        </span>
-                                    </div> -->
-                            </a>
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- card 2 -->
-                <div class="card_novedades">
+                    <!-- card 2 -->
+                    <div class="card_novedades">
 
-                    <div class="card_novedades_imagen">
-                        <img src="imagenes/chamarra_blanca.png" alt="">
-                    </div>
-
-                    <div class="card-texto_boton">
-
-                        <div class="card_texto">
-                            <h2>El diablo <br> $700 MX</h2>
+                        <div class="card_novedades_imagen">
+                            <img src="imagenes/chamarra_blanca.png" alt="">
                         </div>
 
-                        <div class="card_boton">
-                            <a href="./pages/carrito.html">
-                                <button>
-                                    <img src="./imagenes/cart.png" alt="        
+                        <div class="card-texto_boton">
+
+                            <div class="card_texto">
+                                <h2>El diablo <br> $700 MX</h2>
+                            </div>
+
+                            <div class="card_boton">
+                                <a href="./pages/carrito.html">
+                                    <button>
+                                        <img src="./imagenes/cart.png" alt="        
                                         " width="35" height="35">
-                                </button>
-                            </a>
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- card 3 -->
-                <div class="card_novedades">
+                    <!-- card 3 -->
+                    <div class="card_novedades">
 
-                    <div class="card_novedades_imagen">
-                        <img src="imagenes/corazon_chamarra.png" alt="">
-                    </div>
-
-                    <div class="card-texto_boton">
-                        <div class="card_texto">
-                            <h2>Corazón <br> $700 MX</h2>
+                        <div class="card_novedades_imagen">
+                            <img src="imagenes/corazon_chamarra.png" alt="">
                         </div>
 
-                        <div class="card_boton">
-                            <a href="./pages/carrito.html">
-                                <button>
-                                    <img src="./imagenes/cart.png" alt="        
+                        <div class="card-texto_boton">
+                            <div class="card_texto">
+                                <h2>Corazón <br> $700 MX</h2>
+                            </div>
+
+                            <div class="card_boton">
+                                <a href="./pages/carrito.html">
+                                    <button>
+                                        <img src="./imagenes/cart.png" alt="        
                                         " width="35" height="35">
-                                </button>
-                            </a>
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- card 4 -->
-                <div class="card_novedades">
+                    <!-- card 4 -->
+                    <div class="card_novedades">
 
-                    <div class="card_novedades_imagen">
-                        <img src="imagenes/love_pants_dama.png" alt="">
-                    </div>
-
-                    <div class="card-texto_boton">
-
-                        <div class="card_texto">
-                            <h2>Love pants<br> $700 MX</h2>
+                        <div class="card_novedades_imagen">
+                            <img src="imagenes/love_pants_dama.png" alt="">
                         </div>
 
-                        <div class="card_boton">
-                            <a href="./pages/carrito.html">
-                                <button>
-                                    <img src="./imagenes/cart.png" alt="        
+                        <div class="card-texto_boton">
+
+                            <div class="card_texto">
+                                <h2>Love pants<br> $700 MX</h2>
+                            </div>
+
+                            <div class="card_boton">
+                                <a href="./pages/carrito.html">
+                                    <button>
+                                        <img src="./imagenes/cart.png" alt="        
                                         " width="35" height="35">
-                                </button>
-                            </a>
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- card 5 -->
-                <div class="card_novedades">
+                    <!-- card 5 -->
+                    <div class="card_novedades">
 
-                    <div class="card_novedades_imagen">
-                        <img src="imagenes/pants_casual.png" alt="">
-                    </div>
-                    <div class="card-texto_boton">
-                        <div class="card_texto">
-                            <h2>Pants casual<br> $700 MX</h2>
+                        <div class="card_novedades_imagen">
+                            <img src="imagenes/pants_casual.png" alt="">
                         </div>
-                        <div class="card_boton">
-                            <a href="./pages/carrito.html">
-                                <button>
-                                    <img src="./imagenes/cart.png" alt="        
+                        <div class="card-texto_boton">
+                            <div class="card_texto">
+                                <h2>Pants casual<br> $700 MX</h2>
+                            </div>
+                            <div class="card_boton">
+                                <a href="./pages/carrito.html">
+                                    <button>
+                                        <img src="./imagenes/cart.png" alt="        
                                         " width="35" height="35">
-                                </button>
-                            </a>
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- card 6 -->
-                <div class="card_novedades">
+                    <!-- card 6 -->
+                    <div class="card_novedades">
 
-                    <div class="card_novedades_imagen">
-                        <img src="imagenes/playera hombre necio.png" alt="">
-                    </div>
-
-                    <div class="card-texto_boton">
-                        <div class="card_texto">
-                            <h2>hombre<br> $700 MX</h2>
+                        <div class="card_novedades_imagen">
+                            <img src="imagenes/playera hombre necio.png" alt="">
                         </div>
 
-                        <div class="card_boton">
-                            <a href="./pages/carrito.html">
-                                <button>
-                                    <img src="./imagenes/cart.png" alt="        
+                        <div class="card-texto_boton">
+                            <div class="card_texto">
+                                <h2>hombre<br> $700 MX</h2>
+                            </div>
+
+                            <div class="card_boton">
+                                <a href="./pages/carrito.html">
+                                    <button>
+                                        <img src="./imagenes/cart.png" alt="        
                                         " width="35" height="35">
-                                </button>
-                            </a>
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!--  card 7 -->
-                <div class="card_novedades">
+                    <!--  card 7 -->
+                    <div class="card_novedades">
 
-                    <div class="card_novedades_imagen">
-                        <img src="imagenes/playera_ballena.png" alt="">
-                    </div>
-
-                    <div class="card-texto_boton">
-                        <div class="card_texto">
-                            <h2>Ballenita <br> $700 MX</h2>
+                        <div class="card_novedades_imagen">
+                            <img src="imagenes/playera_ballena.png" alt="">
                         </div>
 
-                        <div class="card_boton">
-                            <a href="./pages/carrito.html">
-                                <button>
-                                    <img src="./imagenes/cart.png" alt="        
+                        <div class="card-texto_boton">
+                            <div class="card_texto">
+                                <h2>Ballenita <br> $700 MX</h2>
+                            </div>
+
+                            <div class="card_boton">
+                                <a href="./pages/carrito.html">
+                                    <button>
+                                        <img src="./imagenes/cart.png" alt="        
                                         " width="35" height="35">
-                                </button>
-                            </a>
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!--  card 8 -->
-                <div class="card_novedades">
+                    <!--  card 8 -->
+                    <div class="card_novedades">
 
-                    <div class="card_novedades_imagen">
-                        <img src="imagenes/corazon_chamarra.png" alt="">
-                    </div>
-
-                    <div class="card-texto_boton">
-                        <div class="card_texto">
-                            <h2>Corazón <br> $700 MX</h2>
+                        <div class="card_novedades_imagen">
+                            <img src="imagenes/corazon_chamarra.png" alt="">
                         </div>
 
-                        <div class="card_boton">
-                            <a href="./pages/carrito.html">
-                                <button>
-                                    <img src="./imagenes/cart.png" alt="        
+                        <div class="card-texto_boton">
+                            <div class="card_texto">
+                                <h2>Corazón <br> $700 MX</h2>
+                            </div>
+
+                            <div class="card_boton">
+                                <a href="./pages/carrito.html">
+                                    <button>
+                                        <img src="./imagenes/cart.png" alt="        
                                         " width="35" height="35">
-                                </button>
-                            </a>
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
-            <!-- Fin del contenedor novedades -->
+                </div>
+                <!-- Fin del contenedor novedades -->
             </div>
             <section>
     </main>
@@ -423,6 +406,7 @@
         </div>
     </footer>
 </body>
+
 
 <script>
     $('card_boton').click(function () {

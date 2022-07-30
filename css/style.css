@@ -260,43 +260,72 @@ header {
 
 /* ================ Página inicio: imagen principal y texto ================ */
 
-/* contenedor de la imagen */
-.index_primer_contenedor-imagen{
-    width: 100%;
-    height: 400px;
-}
+/* contenedor principal */
 
-
-.index_primer_contenedor-imagen img {
+.contenedor_principal {
     width: 100%;
     height: 100%;
+    display: grid;
+    gap: 40px;
+    background-color: azure;
+    /* Indicar cuantas columnas tendra */
+    grid-template-columns: repeat(3, 1fr);
+    /* Indicar cuantas filas tendra */
+    grid-template-rows: 400px 100px 900px;
+
+    /* acomodar el grid */
+    grid-template-areas:
+        "principal_imagen principal_texto principal_texto"
+        /*fila 1*/
+        "titulo_novedades titulo_novedades titulo_novedades"
+        /*fila 2*/
+        "contenedor_novedades contenedor_novedades contenedor_novedades"
+        /*fila 3*/
+
+}
+
+/* contenedor de la imagen */
+.contenedor_principal-imagen {
+    margin-top: 90px;
+    grid-area: principal_imagen;
+    background-color: steelblue;
+
+}
+
+.contenedor_principal-imagen img {
+    width: 100%;
+    height: 340px;
+    min-height: 350px;
     object-fit: cover;
     transition-delay: 1s;
     transition: width 3s;
 }
-/* .index_primer_contenedor-imagen img:hover {
-    width: 400px;
-} */
-
-/* contenedor donde esta el texto principal y el boton */
-
-.index_primer_contenedor-titulo{
-   margin-top: 25px;
-   color: red;
+.contenedor_principal-imagen img:hover {
+    width: 700px;
 }
 
-.index_primer_contenedor-texto {
+/* contenedor donde esta el texto principal y el boton */
+.contenedor_principal-texto {
+    margin-top: 90px;
+    grid-area: principal_texto;
+    background-color: azure;
+}
+.contenedor_principal-texto h1{
+    color: red;
+
+}
+
+.contenido_principal-texto {
     font-size: 18px;
     height: auto;
-    width: auto;
-
+    width: 92%;
+    margin-right: 230px;
+    margin-left: 20px;
 }
 
 .contenedor_boton_checar {
     margin-left: 20px;
 }
-
-
 
 /* boton checar(se usa en la página carrito igual) */
 .btn_checar {
@@ -351,54 +380,17 @@ header {
 /* Texto antes de la animación */
 .titulo_novedades h2 {
     position: static;
-    font-size: 84px;
-    font-style: oblique;
-    font-weight: bold;
+    font-size: 44px;
     color: white;
+    -webkit-text-stroke: 5px white;
+    text-transform: uppercase;
     /*mayusculas*/
-}
-
-
-@keyframes animacion_texto {
-
-    0%,
-    10%,
-    100% {
-        width: 0;
-    }
-
-    70%,
-    90% {
-        width: 100%;
-    }
-}
-
-
-/* contenedor principal */
-
-.contenedor_principal {
-
-    display: grid;
-    gap: 40px;
-    background-color: azure;
-    /* Indicar cuantas columnas tendra */
-    grid-template-columns: 1fr;
-    /* Indicar cuantas filas tendra */
-
-    /* acomodar el grid */
-    grid-template-areas:
-        "contenedor_novedades contenedor_novedades contenedor_novedades"
-        /*fila 3*/
-
 }
 
 
 /* contenedor principal novedades */
 .contenedor_novedades {
-    width: 100%;
-    height: 100%;
     grid-area: contenedor_novedades;
-    grid-template-rows: 900px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -406,14 +398,13 @@ header {
 
 /* card del contenedor novedades */
 .card_novedades {
-    background-color: white;
+    background-color: rgba(255, 0, 0, 0.721);
     width: 295px;
     height: 400px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 30px;
     box-shadow: 5px 5px 20px red;
-
 
 }
 
@@ -466,84 +457,24 @@ header {
 }
 
 
-/* Fin de personalización novedades */
-
-
-
 /* ================ Página carrito ================ */
 
 
 /* contenedor principal */
 
-.carrito-contenedor_principal {
-    width: 100%;
-    height: 750px;
-    display: grid;
-    margin-top: 80px;
-    /* margin-left: 10px; */
-    margin-bottom: auto;
-    gap: 20px;
-    background-color: white;
-    /* Indicar cuantas columnas tendra */
-    grid-template-columns: 400px 400px 300px 200px;
-    /* Indicar cuantas filas tendra */
-    grid-template-rows: 50px 200px 200px 100px;
 
-    /* acomodar el grid */
-    grid-template-areas:
-        "texto_carrito texto_carrito texto_carrito texto_carrito"
-        /*fila 1*/
-        "contenedor_productos contenedor_productos contenedor_precio_total contenedor_precio_total"
-        /*fila 2*/
-        "contenedor_productos contenedor_productos contenedor_precio_total contenedor_precio_total"
-        /*fila 4*/
-        "contenedor_productos contenedor_productos contenedor_precio_total contenedor_precio_total";
-    /*fila 2*/
-
-}
-
-/* Contenedores hijos */
 .carrito-texto_principal {
-    grid-area: texto_carrito;
+    background-color: red;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
 }
 
-.carrito-contenedor_productos {
-    margin-top: 20px;
-    grid-area: contenedor_productos;
+.carrito-texto_principal h1 {
+    font-size: 40px;
+    font-style: oblique;
+    font-weight: bold;
 }
-
-.carrito-contenedor_precios {
-    grid-area: contenedor_precio_total;
-    width: 330px;
-    height: 300px;
-    background-color: white;
-    border: 1px solid silver;
-    border-radius: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 30px;
-    margin-top: 20px;
-
-}
-.carrito-contenedor_precios:hover{
-    transform: scale(1.2);
-    animation-name: precio_total;
-    animation: precio_total 30s infinite;
-}
-
-/* animacion de card precios */
-@keyframes precio_total {
-    from {
-        background-color: white;
-    }
-    to {
-        color: red;
-        background-color: rgba(202, 202, 202, 0.8);
-    }
-}
-
-
-
 
 /* personalizacion del contenedor de productos */
 .card_producto {
@@ -1407,6 +1338,8 @@ transform: scale(1.06);
         min-width: 320px;
         overflow-y: hidden;
         overflow-x: hidden;
+        margin-right: 5px;
+        margin-left: 5px;
         grid-template-columns: 1fr;
         background-color: #fff;
         grid-template-rows: auto auto 100px auto;
@@ -1420,19 +1353,24 @@ transform: scale(1.06);
 
     /* contenedor de imagen principal */
     .contenedor_principal-imagen {
-        width: 100%;
-        min-width: 320px;
+        width: 98%;
+        max-width: 590px;
         background-color: steelblue;
     }
 
     /* contenedor de imagen principal */
     .contenedor_principal-imagen img {
-        min-width: 320px;
         width: 100%;
+        min-width: 320px;
+        max-width: 590px;
+        min-height: 200px;
         background-color: steelblue;
     }
 
     .contenedor_principal-texto {
+        width: 98%;
+        min-width: 320px;
+        max-width: 590px;
         margin-top: 0px;
     }
 
@@ -1445,7 +1383,7 @@ transform: scale(1.06);
         margin-left: 5px;
         padding-right: 4px;
         text-align: start;
-        width: 100%;
+
     }
 
     /* contenedor del boton checar */
@@ -1453,6 +1391,11 @@ transform: scale(1.06);
         margin-bottom: 30px;
         margin-right: 20px;
         margin-left: 5px;
+    }
+    .contenedor_novedades{
+        width: auto;
+        min-width: 320px;
+        max-width: 590px;
     }
 
     .card_novedades {
@@ -1466,7 +1409,6 @@ transform: scale(1.06);
         background-color: #0095ff;
 
     }
-
     /* Footer */
     .contenedor_footer {
         width: auto;
@@ -1661,11 +1603,11 @@ transform: scale(1.06);
     /* pagina contactanos */
     .contenedor_principal-contactanos {
         display: grid;
-
         min-width: 320px;
         overflow: hidden;
-        background-color: #0095ff;
         margin-top: 60px;
+        margin-right: 5px;
+        margin-left: 5px;
         grid-template-columns: 1fr;
         /* Indicar cuantas filas tendra */
         grid-template-rows: auto auto auto;
@@ -1684,6 +1626,7 @@ transform: scale(1.06);
     .titulo_contactanos {
         width: 100%;
         min-width: 320px;
+        margin-top: 20px;
     }
 
     .titulo_contactanos h2 {
@@ -1803,29 +1746,30 @@ transform: scale(1.06);
     .carrito-contenedor_principal {
         display: grid;
         height: auto;
-        min-width: 320px;
+        min-width: 300px;
         overflow-y: hidden;
         overflow-x: hidden;
-        background-color: #0095ff;
+        margin: 3px;
+        margin-right: 8px;
+        margin-left: 8px;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
         grid-template-areas:
             "texto_carrito"
             "contenedor_productos"
             "contenedor_precio_total";
-        gap: 10px;
+        gap: 5px;
     }
 
     .carrito-texto_principal {
         background-color: red;
         color: white;
         text-align: center;
+        margin-top: 30px;
     }
 
     .carrito-texto_principal h1 {
-        width: 99%;
-        min-width: 320px;
-        font-size: 60px;
+        font-size: 40px;
         font-style: oblique;
         font-weight: bold;
     }
@@ -1835,10 +1779,11 @@ transform: scale(1.06);
     .card_producto {
         display: grid;
         width: 99%;
+        min-width: 310px;
         overflow-y: hidden;
         overflow-x: hidden;
         min-width: 320px;
-        margin-bottom: 0px;
+
         gap: 10px;
         margin-top: 10px;
         background-color: white;
@@ -1868,13 +1813,8 @@ transform: scale(1.06);
     .texto-producto {
 
         grid-area: contenedor_texto_productos;
-        background-color: #0095ff;
-        padding: 10px;
         width: 100%;
         min-width: 320px;
-        margin-bottom: 10px;
-        border: 2px;
-        border-color: red;
     }
 
     .eliminar_producto {
@@ -1899,7 +1839,7 @@ transform: scale(1.06);
 
 
 /* páginas index,descuentos,Quienes somos: tablet vertical,telefono horizontal y laptop pequeñas */
-@media screen and (max-width: 900px) and (min-width: 601px) {
+@media screen and (max-width: 890px) and (min-width: 601px) {
 
     .contenedor_principal {
         display: grid;
@@ -1920,11 +1860,12 @@ transform: scale(1.06);
         margin-bottom: 0px;
         grid-area: principal_imagen;
         background-color: steelblue;
+        min-height: 400px;
     }
 
     .contenedor_principal-imagen img {
         height: 100%;
-        height: 100%;
+        min-height: 400px;
         object-fit: cover;
     }
 
@@ -1953,7 +1894,7 @@ transform: scale(1.06);
         display: grid;
         min-width: 300px;
         overflow: hidden;
-        margin-top: 60px;
+        margin-top: 140px;
         grid-template-columns: 1fr;
         /* Indicar cuantas filas tendra */
         grid-template-rows: auto auto auto;
@@ -1984,7 +1925,7 @@ transform: scale(1.06);
 
     /* pagina contactanos */
     .titulo_contactanos {
-        margin-top: 70px;
+        margin-top: 10px;
         width: 100%;
         min-width: 320px;
         padding-top: 10px;
@@ -2022,7 +1963,7 @@ transform: scale(1.06);
 }
 
 /* index: laptops */
-@media screen and (max-width: 1400px) and (min-width: 901px) {
+@media screen and (max-width: 1400px) and (min-width: 891px) {
 
     .contenedor_principal {
         display: grid;
